@@ -3,6 +3,10 @@ from pathlib import Path
 
 
 class ConfigDep(BaseSettings):
+    """
+    Class for keeping setting for deployment environment,
+    inherits from BaseSettings
+    """
     db_protocol: str = "postgresql+asyncpg"
     db_name: str
     db_user: str
@@ -22,8 +26,8 @@ class ConfigDep(BaseSettings):
         )
 
     class Config:
-        env_file = Path(".env").resolve()
-
+        # env_file = Path(".env").resolve()
+        env_file = ".env"
 
 # class Settings(BaseSettings):
 #     db_protocol: str = 'postgresql+asyncpg'

@@ -1,8 +1,8 @@
-"""collected_questions_table
+"""Added 'collected_questions' table
 
-Revision ID: 99ad6a918e64
-Revises: ebe6f42f70eb
-Create Date: 2023-05-29 17:34:48.397350
+Revision ID: 8420d398566b
+Revises: 
+Create Date: 2023-06-04 13:32:33.067296
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '99ad6a918e64'
-down_revision = 'ebe6f42f70eb'
+revision = '8420d398566b'
+down_revision = None
 branch_labels = None
 depends_on = None
 
@@ -26,7 +26,8 @@ def upgrade() -> None:
     sa.Column('original_creation_time', sa.String(length=50), nullable=False),
     sa.Column('time_added_to_db', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id', name=op.f('pk_collected_questions')),
-    sa.UniqueConstraint('id', name=op.f('uq_collected_questions_id'))
+    sa.UniqueConstraint('id', name=op.f('uq_collected_questions_id')),
+    sa.UniqueConstraint('question_id', name=op.f('uq_collected_questions_question_id'))
     )
     # ### end Alembic commands ###
 

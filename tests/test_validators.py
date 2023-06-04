@@ -1,6 +1,6 @@
 import pytest
 from pydantic import ValidationError
-from data_validation.validators import validate_response
+from src.data_validation import validate_response
 
 
 @pytest.mark.asyncio

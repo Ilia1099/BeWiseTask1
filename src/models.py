@@ -15,11 +15,18 @@ metadata = MetaData(
 
 
 class Base(AsyncAttrs, DeclarativeBase):
+    """
+    base class for model mapping
+    """
     metadata = metadata
 
 
 class CollectedQuestions(Base):
+    """
+    model representing 'collected_questions' table in database
+    """
     __tablename__ = "collected_questions"
+
     id: Mapped[int] = mapped_column(
         primary_key=True, autoincrement=True, unique=True
     )

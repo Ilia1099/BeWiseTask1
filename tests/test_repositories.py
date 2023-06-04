@@ -1,10 +1,7 @@
-import asyncio
-
 import decouple
-import pytest
 from sqlalchemy.ext.asyncio import AsyncSession
-from database_connection import connector
-from repositoreis.questions import get_non_unique
+from src.database_connection import connector
+from src.repositoreis.questions import get_non_unique
 
 a = decouple.config("mode")
 settings = connector.get_settings(a)

@@ -1,8 +1,8 @@
 import asyncio
 
 import decouple
-import models
-from database_connection.connector import get_settings, engine_factory
+from src import models
+from src.database_connection.connector import get_settings, engine_factory
 
 
 async def create():
