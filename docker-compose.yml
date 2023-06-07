@@ -25,9 +25,9 @@ services:
     networks:
       - some-name
     environment:
-      - POSTGRES_DB=test_bs1
-      - POSTGRES_USER=me
-      - POSTGRES_PASSWORD=qwerty1234
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
     command: ["postgres", "-c", "log_statement=all", "-c", "log_destination=stderr"]
 
 networks:
