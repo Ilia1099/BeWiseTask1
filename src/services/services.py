@@ -6,6 +6,11 @@ from src.repositoreis.questions import get_non_unique
 from src.serializers.serializers import QuestionIn, QuestionOut
 from src.web_connetion.request_sender import make_request
 from src.repositoreis.questions import get_last_added
+from src.repositoreis.echo import HelloWorldResponse
+
+
+async def plug_holder():
+    return HelloWorldResponse()
 
 
 async def get_questions(web_ses: ClientSession, db_ses: AsyncSession,
