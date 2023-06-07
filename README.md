@@ -20,6 +20,14 @@ Web application and database should be run via docker container.
 ## Requirements installation:
 - pip install -r requirements.txt
 
+## Credentials for .env file:
+- mode = dep
+- DB_USER=
+- DB_PASSWORD=
+- DB_HOST=
+- DB_PORT=5432 (default for Postgres)
+- DB_NAME=
+
 ## Run project:
 to run this service you need to follow this steps
 
