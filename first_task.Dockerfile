@@ -1,12 +1,12 @@
 FROM python:3.10
 
-WORKDIR /opt
+WORKDIR /opt/app
 
 COPY ./requirements.txt /opt/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /opt/requirements.txt
 
-COPY ./src /opt/src
+COPY ./src /opt/app/src
 
 COPY . .
 
