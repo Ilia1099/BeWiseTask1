@@ -16,3 +16,8 @@ async def create():
 
 if __name__ == '__main__':
     asyncio.run(create())
+
+
+# TODO
+# Finish adjustment of db (create user, grant privileges)
+# install alembic, make migrations, test models

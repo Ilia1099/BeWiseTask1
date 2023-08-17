@@ -1,6 +1,6 @@
 import pytest
 from pydantic import ValidationError
-from src.serializers import QuestionIn
+from src.serializers.serializers import QuestionIn
 
 
 def test_qsin_ok():

@@ -13,7 +13,7 @@ class ConfigDep(BaseSettings):
     db_host: str
     db_port: int
 
-    def db_dsn(self, protocol=None) -> PostgresDsn:
+    def db_dsn(self, protocol=None) -> str:
         protocol = protocol or self.db_protocol
         return PostgresDsn.build(
             scheme=protocol,

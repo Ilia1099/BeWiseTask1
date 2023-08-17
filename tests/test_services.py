@@ -2,7 +2,7 @@ import aiohttp
 import pytest
 from aiohttp import ClientSession
 
-from src.web_connetion import make_request
+from src.web_connetion.request_sender import make_request
 # from services.services import get_payload
 from .test_request_sender import MockResponse
 

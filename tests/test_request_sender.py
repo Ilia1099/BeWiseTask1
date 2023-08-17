@@ -2,7 +2,7 @@ import aiohttp
 import pytest
 from fastapi import HTTPException
 
-from src.web_connetion import make_request
+from src.web_connetion.request_sender import make_request
 
 
 class MockResponse:
